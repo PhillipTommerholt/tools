@@ -1,0 +1,15 @@
+<premis version="" xmlns="http://www.loc.gov/premis/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/premis/v3 ../../schemas/premis.xsd">
+	<object xsi:type="intellectualEntity ">
+		<objectIdentifier xsi:type="objectIdentifierComplexType" >
+			<objectIdentifierType/>
+			<objectIdentifierValue/>
+		</objectIdentifier>
+		<objectCharacteristics>
+			<format>
+				<formatDesignation>
+					<formatName/>
+				</formatDesignation>
+			</format>
+		</objectCharacteristics>
+	</object>
+</premis>

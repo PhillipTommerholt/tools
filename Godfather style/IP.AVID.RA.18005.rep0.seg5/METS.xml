@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ID.AVID.RA.18005.rep0.seg5/METS.xml - a root level METS file for a segment of a representation -->
+<!-- This root level METS.xml file is for a segment of a representation and includes information about only this segment, but not the components of this segment of the representation-->
+<!-- Information about the components of this segment of the representation is in the METS.xml file at the representation level in the representations folder. -->
+<!-- This segment of a representation may be one of several segments in order to manage the size of the representation. -->
+<!-- This root level METS file for this segment of a represenation is a child and may point to its parent by pointing to the root level METS file of the parent using the OBJID value -->
+<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xsi:schemaLocation="http://www.loc.gov/METS/ schemas/mets.xsd" 
+	PROFILE="http://www.ra.ee/METS/v01/IP.xml" TYPE="SIP" OBJID="ID.AVID.RA.18005.rep0.seg5" LABEL="root level METS file for a representation segment">
+	<!-- Note that the OBJID can be replaced with any ID scheme. In this example IDs carring information are used to ease understanding -->
+	<!-- PROFILE is the official E-ARK METS profile. TYPE is either SIP, AIP, DIP or AIC -->
+	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" 
+		LASTMODDATE="2015-12-14T14:20:00"> <!-- CS - LASTMODDATA only mandatory if different from CREATEDATA -->
+		<agent TYPE="OTHER" ROLE="CREATOR" OTHERTYPE="SOFTWARE"> <!-- CS mandatory -->
+			<name>E-ARK SIP Creator</name> <!-- CS optional -->
+			<note>VERSION=0.0.1</note> <!-- CS optional -->
+		</agent>
+		<metsDocumentID>ID.AVID.RA.18005.rep0.seg5</metsDocumentID> <!-- CS optional, required to be equal to OBJID -->
+	</metsHdr>
+	
+	<fileSec>
+		<!-- In these example IDs are carring information to ease understanding - they look like paths to ease understanding, but are just IDs, similar to the naming of namespaces - these IDs can be replaced with information less UUID -->
+		<fileGrp USE="E-ARK files root" ID="ID.AVID.RA.18005.rep0.seg5.E-ARK.fileGrp.root"> <!-- this ID is just for internal reference -->
+			<!-- schemas -->		
+			<fileGrp USE="schemas" ID="ID.AVID.RA.18005.rep0.seg5.E-ARK.fileGrp.schemas">  <!-- this ID is just for internal reference -->
+				<!-- METS.xsd -->
+				<file ID="ID.AVID.RA.18005.rep0.seg5.schemas.mets.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="75debd87e3d070e8590a393ac38483e4" CHECKSUMTYPE="MD5" SIZE="134223">
+					<FLocat LOCTYPE="URL" xlink:href="../../schemas/mets.xsd" xlink:type="simple"/>
+				</file>
+				<!-- mets_xlink.xsd -->
+				<file ID="ID.AVID.RA.18005.rep0.seg5.schemas.mets_xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="0aaa1dd8380416f09ac607a06b3ec1a0" CHECKSUMTYPE="MD5" SIZE="3021">
+					<FLocat LOCTYPE="URL" xlink:href="../../schemas/mets_xlink.xsd" xlink:type="simple"/>
+				</file>
+				<!-- xlink.xsd -->
+				<file ID="ID.AVID.RA.18005.rep0.seg5.schemas.xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+					<FLocat LOCTYPE="URL" xlink:href="../../schemas/xlink.xsd" xlink:type="simple"/>
+				</file>
+			</fileGrp>
+			<!-- documentation -->		
+			<fileGrp USE="documentation" ID="ID.AVID.RA.18005.rep0.seg5.E-ARK.fileGrp.documentation">  <!-- this ID is just for internal reference -->
+				<!-- EAD and PREMIS have been described under dmdSec and amdSec and according to the CS they MUST NOT (or SHOULD?) be listed here -->
+			</fileGrp>				
+			<!-- metadata -->				
+			<fileGrp USE="metadata" ID="ID.AVID.RA.18005.E-ARK.fileGrp.metadata">  <!-- this ID is just for internal reference -->
+				<!-- EAD and PREMIS have been described under dmdSec and amdSec and according to the CS they MUST NOT (or SHOULD?) be listed here -->
+			</fileGrp>
+			<!-- the files of the representations are not here, in the structMap there is a reference to their METS file -->
+		</fileGrp>
+	</fileSec>
+	
+	<structMap TYPE="physical" LABEL="E-ARK structural map"> <!-- According to the CS v0.13 sec. 5.2, p 36 --> <!-- Modified by request of Jan Rörden -->
+		<div LABEL="ID.AVID.RA.18005.E-ARK.structural.map">
+			<div LABEL="schemas">
+				<fptr FILEID="ID.AVID.RA.18005.rep0.seg5.schemas.mets.xsd"/> <!-- this FILEID attr. has a ref. to the ID attribute in the <file> element in the <fileGrp> element in the <fileSec> element -->
+				<fptr FILEID="ID.AVID.RA.18005.rep0.seg5.schemas.mets_xlink.xsd"/> 
+				<fptr FILEID="ID.AVID.RA.18005.rep0.seg5.schemas.xlink.xsd"/>
+			</div>
+			<div LABEL="documentation"><!-- sorry no documentation yet - to do --></div>	
+			<div LABEL="metadata">
+				<div LABEL="descriptive"><!-- ead.xml has been described in the dmdSec so nothing further to describe here according to CS--></div>	
+				<div LABEL="preservation"><!-- premis.xml have been described in the amdSec so nothing further to describe here according to CS--></div>	
+				<div LABEL="other"></div>	
+			</div>
+			<div LABEL="representations">
+				<!-- each root level METS file in the representations refers to its own METS files in the segments and in the representations folder using the <mptr> element -->			
+				<!-- we use the attribute LABEL value 'segment' in the 'div' element for representations and the attribute TYPE value 'child' or 'parent'-->
+				<!-- we have no CHECKSUM for these METS files because the mptr does not allow it and because the <file> element in the <fileGrp> in the <fileSec> apparently is only to be used for files inside the package -->
+				<div LABEL="representations/ID.AVID.RA.18005.rep0" ORDER="0">
+					<div LABEL="representation segments">	 	
+						<div LABEL="representations folder" TYPE="representations folder in this segment" ORDER="2"> <!-- do we want this ordering here? --> 
+							<mptr xlink:href="representations/AVID.RA.18005.rep0/METS.xml" xlink:title="representation level METS representation 0 segment 5" xlink:type="simple" LOCTYPE="URL"/> 
+							<!-- this is a METS reference to the METS file in the representations folder -->
+						</div>
+						<div LABEL="parent IP" TYPE="representation segment parent"> 
+							<!-- is it acceptable to have the parent identifier here, or should it be inside its own structMap element? -->
+							<mptr xlink:href="../ID.AVID.RA.18005.rep0.seg0/METS.xml" xlink:title="root level METS file for parent segment (first segment) of the representation" xlink:type="simple" LOCTYPE="URL"/> 
+							<!-- this is a METS reference to another METS file, and this file is in another segment - compare with CS v0.13 sec. 5.2, p 36 -->
+							<!-- recall that the ID is just a name, to ease understanding in this example is it similar to the path, it can be replaced with an UUID -->
+						</div>	 							
+					</div>						
+				</div>
+			</div>
+		</div>
+	</structMap>
+</mets>

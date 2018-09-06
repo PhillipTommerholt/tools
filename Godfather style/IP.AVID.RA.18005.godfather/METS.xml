@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- ID.AVID.RA.18005.godfather/METS.xml - a root level METS file for all representations of the archive package -->
+<!-- working file name: METS E-ARK IP.AVID.SA.18005.godfather.xml-->
+<!-- This METS.xml file in the root of the package includes information about the full package and lists the representations, but not the components of the representations; it has the working title: godfather IP -->
+<!-- This root level METS file points to one or more representations by referering to them as children. This top level or "godfather" root level METS file points to the root level METS file of the child(ren) using the OBJID value -->
+<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	xsi:schemaLocation="http://www.loc.gov/METS/ schemas/mets.xsd" 
+	PROFILE="http://www.ra.ee/METS/v01/IP.xml" TYPE="SIP" OBJID="ID.AVID.RA.18005.godfather" LABEL="root level METS file for an IP">
+	<!-- Note that an ID can be replaced with any ID scheme. In this example IDs carring information are used to ease understanding -->
+	<!-- PROFILE is the official E-ARK METS profile. TYPE is either SIP, AIP, DIP or AIC -->
+	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" 
+		LASTMODDATE="2015-12-14T14:20:00"> <!-- CS - LASTMODDATA only mandatory if different from CREATEDATA -->
+		<agent TYPE="OTHER" ROLE="CREATOR" OTHERTYPE="SOFTWARE"> <!-- CS mandatory -->
+			<name>E-ARK SIP Creator</name> <!-- CS optional -->
+			<note>VERSION=0.0.1</note> <!-- CS optional -->
+		</agent>
+		<metsDocumentID>ID.AVID.RA.18005.godfather</metsDocumentID> <!-- CS optional, required to be equal to OBJID -->
+	</metsHdr>
+	
+	<dmdSec ID="ID.AVID.RA.18005.DMD.1" STATUS="CURRENT">
+		<mdRef ID="ID.AVID.RA.18005.DMD.1.mdRef.1" LOCTYPE="URL" CREATED="2015-12-14T14:20:00" MDTYPE="EAD"
+			MIMETYPE="application/xml" xlink:href="metadata/descriptive/ead.xml" xlink:type="simple" 
+			CHECKSUM="39172d05dcc7019b19251b33347dbfb3" CHECKSUMTYPE="MD5" SIZE="9220"/>
+	</dmdSec>
+	
+	<amdSec ID="ID.AVID.RA.18005.ADM.1"> <!-- CS mandatory exactly one <amdSec> which refers to all root level preservation metadata files-->
+		<digiprovMD ID="ID.AVID.RA.18005.ADM.1.digiproMD.1" STATUS="CURRENT"> <!-- CS mandatory exactly one <digiprovMD> element for each file in the “metadata/preservation” folder. The attribute STAUS is Mandatory, must include one of the two values [superseeded, current]-->
+			<mdRef ID="ID.AVID.RA.18005.ADM.1.digiproMD.1.mdRef.1" LOCTYPE="URL" CREATED="2015-12-14T14:20:00" MDTYPE="PREMIS"
+			 MIMETYPE="application/xml" xlink:href="metadata/preservation/premis.xml" xlink:type="simple" 
+			 CHECKSUM="1779a4c0f804a2352165e740fd4b78f3" CHECKSUMTYPE="MD5" SIZE="532"/>
+			<!-- CS mandatory attributes: ID, LOCTYPE, CREATED, CHECKSUM, CHECKSUMTYPE, MDTYPE, MIMETYPE -->
+		</digiprovMD>
+	</amdSec>
+	
+	<fileSec>
+		<fileGrp USE="E-ARK files root" ID="ID.AVID.RA.18005.E-ARK.fileGrp.root"> <!-- this ID is just for internal reference -->
+			<!-- schemas -->		
+			<fileGrp USE="schemas" ID="ID.AVID.RA.18005.E-ARK.fileGrp.schemas">  <!-- this ID is just for internal reference -->
+				<!-- METS.xsd -->
+				<file ID="ID.AVID.RA.18005.schemas.mets.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="75debd87e3d070e8590a393ac38483e4" CHECKSUMTYPE="MD5" SIZE="134223">
+					<FLocat LOCTYPE="URL" xlink:href="schemas/mets.xsd" xlink:type="simple"/>
+				</file>
+				<!-- mets_xlink.xsd -->
+				<file ID="ID.AVID.RA.18005.schemas.mets_xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="0aaa1dd8380416f09ac607a06b3ec1a0" CHECKSUMTYPE="MD5" SIZE="3021">
+					<FLocat LOCTYPE="URL" xlink:href="schemas/mets_xlink.xsd" xlink:type="simple"/>
+				</file>
+				<!-- xlink.xsd -->
+				<file ID="ID.AVID.RA.18005.schemas.xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+					<FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
+				</file>
+				<!-- ead3.xsd -->
+				<file ID="ID.AVID.RA.18005.schemas.ead3.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="7619e9dc6d1b592238e04a1d9be49c06" CHECKSUMTYPE="MD5" SIZE="92510">
+					<FLocat LOCTYPE="URL" xlink:href="schemas/ead3.xsd" xlink:type="simple"/>
+				</file>
+				<!-- premis.xsd -->
+				<file ID="ID.AVID.RA.18005.schemas.premis.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="dd89ed0ccf2c6c910b3e72bb294e7e6f" CHECKSUMTYPE="MD5" SIZE="64508">
+					<FLocat LOCTYPE="URL" xlink:href="schemas/premis.xsd" xlink:type="simple"/>
+				</file>
+			</fileGrp>
+			<!-- documentation -->		
+			<fileGrp USE="documentation" ID="ID.AVID.RA.18005.E-ARK.fileGrp.documentation">  <!-- this ID is just for internal reference -->
+				<file ID="ID.AVID.RA.18005.documentation.northwind.ER.png" USE="documentation" MIMETYPE="image/png"  CREATED="2015-12-14T14:20:00" 
+					CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
+					<FLocat LOCTYPE="URL" xlink:href="documentation/Northwind%20ER%20diagram.png" xlink:type="simple"/>
+				</file>
+			</fileGrp>				
+			<!-- metadata -->				
+			<fileGrp USE="metadata" ID="ID.AVID.RA.18005.E-ARK.fileGrp.metadata">  <!-- this ID is just for internal reference -->
+				<!-- EAD and PREMIS have been described under dmdSec and amdSec and according to the CS they MUST NOT (or SHOULD?) be listed here -->
+			</fileGrp>
+			<!-- the files of the representations are not here, in the structMap there is a reference to their METS file -->
+		</fileGrp>
+	</fileSec>
+	
+	<structMap TYPE="physical" LABEL="E-ARK structural map"> <!-- According to the CS v0.13 sec. 5.2, p 36 --> <!-- Modified by request of Jan Rörden -->
+		<div LABEL="ID.AVID.RA.18005.E-ARK.structural.map">
+			<div LABEL="schemas">
+				<fptr FILEID="ID.AVID.RA.18005.schemas.mets.xsd"/> <!-- this FILEID attr. has a ref. to the ID attribute in the <file> element in the <fileGrp> element in the <fileSec> element -->
+				<fptr FILEID="ID.AVID.RA.18005.schemas.mets_xlink.xsd"/> 
+				<fptr FILEID="ID.AVID.RA.18005.schemas.xlink.xsd"/> 
+				<fptr FILEID="ID.AVID.RA.18005.schemas.ead3.xsd"/>  
+				<fptr FILEID="ID.AVID.RA.18005.schemas.premis.xsd"/> 
+			</div>
+			<div LABEL="documentation">
+				<fptr FILEID="ID.AVID.RA.18005.documentation.northwind.ER.png"/> 	
+			</div>	
+			<div LABEL="metadata">
+				<div LABEL="descriptive"><!-- ead.xml has been described in the dmdSec so nothing further to describe here according to CS--></div>	
+				<div LABEL="preservation"><!-- premis.xml have been described in the amdSec so nothing further to describe here according to CS--></div>	
+				<div LABEL="other"></div>	
+			</div>
+			<div LABEL="representations">
+				<!-- this top root level METS.xml IP only refers to the root level METS files in the representations using the <mptr> element -->	
+				<!-- we use the attribute LABEL value 'child IP' in the 'div' element for representations in accordance with the AIP spec.3.3.1.9 -->
+				<!-- each root level METS file in the representations refer to its own METS files in the segments and in the representations folder using the <mptr> element -->			
+				<!-- we use the attribute LABEL value 'segment' in the 'div' element for representations-->
+				<!-- we have no CHECKSUM for these METS files because the mptr does not allow it and because the <file> element in the <fileGrp> in the <fileSec> apparently is only to be used for files inside the package -->
+				<div LABEL="representations/ID.AVID.RA.18005.rep0" ORDER="0" > <!-- the value of the attribute LABEL is the ID of the representation -->
+					<!-- representation 0 - images in jpg format -->	
+					<div LABEL="child IP" TYPE="representation child">
+						<mptr xlink:href="../ID.AVID.RA.18005.rep0.seg0/METS.xml" xlink:title="root level METS file for representation 0" xlink:type="simple" LOCTYPE="URL"/> 
+						<!-- this is a METS reference to another METS file, and this file is in another segment - compare with CS v0.13 sec. 5.2, p 36 -->
+					</div>
+				</div>
+				<div LABEL="representations/ID.AVID.RA.18005.rep1" ORDER="1"> <!-- the value of the attribute LABEL is the ID of the representation -->
+					<!-- representation 1 - a migration to tif -->
+					<div LABEL="child IP" TYPE="representation child">
+						<mptr xlink:href="../ID.AVID.RA.18005.rep1.seg0/METS.xml" xlink:title="root level METS file for representation 1" xlink:type="simple" LOCTYPE="URL"/>
+						<!-- this is a METS reference to another METS file, and this file is in another segment - compare with CS v0.13 sec. 5.2, p 36 -->
+					</div>	
+				</div>	
+			</div>
+		</div>
+	</structMap>
+</mets>
